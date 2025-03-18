@@ -1,0 +1,6 @@
+services:
+  api:
+    image: kayzinmaung/helloworlddotnet:latest
+    container_name: helloworlddotnet
+    ports:
+      - "3000:8080"
