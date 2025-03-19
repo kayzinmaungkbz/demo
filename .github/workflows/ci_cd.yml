@@ -46,4 +46,4 @@ jobs:
 
       - name: Deploy to Codespace VM
         run: |
-          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} -- "cd /workspaces/demo && git pull origin main && docker compose down && docker rmi kayzinmaung/helloworlddotnet:latest && docker compose up -d"
+          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} -- "cd /workspaces/demo && git pull origin main && docker compose down && docker images -q kayzinmaung/helloworlddotnet:latest | xargs -r docker rmi && docker compose up -d"
