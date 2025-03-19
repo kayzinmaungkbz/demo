@@ -1,1 +1,5 @@
 .vs/
+# Ignore user-specific and build artifacts
+*.csproj.user
+obj/
+bin/
